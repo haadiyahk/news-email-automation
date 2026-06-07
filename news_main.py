@@ -6,6 +6,9 @@ from send_news_mail import send_email
 
 load_dotenv()
 api_key = os.getenv("NEWSAPI_API_KEY2")  
+
+print("API Key:", api_key)
+
 url = "https://newsapi.org/v2/top-headlines?"\
     "country=us&"\
     "category=entertainment&"\
@@ -15,6 +18,8 @@ url = "https://newsapi.org/v2/top-headlines?"\
 request= requests.get(url)
 
 content= request.json()
+
+print(content)
 
 body = "Subject: Today's News\n\n"
 
