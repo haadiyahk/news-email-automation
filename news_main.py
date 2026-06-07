@@ -19,6 +19,7 @@ request= requests.get(url)
 
 content= request.json()
 
+print("API Key:", api_key)
 print(content)
 
 body = "Subject: Today's News\n\n"
